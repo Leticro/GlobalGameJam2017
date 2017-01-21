@@ -12,9 +12,11 @@ public class WaveMaker : MonoBehaviour
 	[SerializeField]
 	private float _waveForce;
 
+#if DEBUG
 	private bool _showCollider;
 	private float _colliderTime;
 	private Vector3 _colliderPosition;
+#endif
 	#endregion
 
 	private void Update()
@@ -35,12 +37,15 @@ public class WaveMaker : MonoBehaviour
 				{
 					var direction = obj.transform.position - hitInfo.point;
 					var rigidbody = obj.GetComponent<Rigidbody>();
-					rigidbody.AddForceAtPosition(direction.normalized * _waveForce, hitInfo.point, ForceMode.Impulse);
+					var force = Mathf.Lerp(_waveForce, 0, Vector3.Distance(hitInfo.point, obj.transform.position) / _waveRadius);
+					Debug.Log("force: "  + force);
+					rigidbody.AddForceAtPosition(direction.normalized * force, hitInfo.point, ForceMode.Impulse);
 				}
 			}
 		}
 	}
 
+#if DEBUG
 	private void OnDrawGizmos()
 	{
 		if (_showCollider)
@@ -50,8 +55,9 @@ public class WaveMaker : MonoBehaviour
 				_showCollider = false;
 			}
 
-			Gizmos.color = new Color(0, 1, 0, 0.5f);
+			Gizmos.color = new Color(0, 1, 0, 0.25f);
 			Gizmos.DrawSphere(_colliderPosition, _waveRadius);
 		}
 	}
+#endif
 }
