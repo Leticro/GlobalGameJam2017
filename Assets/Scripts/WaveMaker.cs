@@ -5,7 +5,6 @@ using UnityEngine;
 public class WaveMaker : MonoBehaviour
 {
 	#region Private
-	[SerializeField]
 	private Camera _camera;
 	[SerializeField]
 	private float _waveRadius;
@@ -18,6 +17,11 @@ public class WaveMaker : MonoBehaviour
 	private Vector3 _colliderPosition;
 #endif
 	#endregion
+
+	private void Awake()
+	{
+		_camera = GetComponent<Camera>();
+	}
 
 	private void Update()
 	{
