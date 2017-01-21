@@ -39,7 +39,8 @@ public class WaveMaker : MonoBehaviour
 				var objects = Physics.OverlapSphere(hitInfo.point, _waveRadius, 1 << LayerMask.NameToLayer("Player"));
 				foreach (var obj in objects)
 				{
-					var direction = obj.transform.position - hitInfo.point;
+					var direction = obj.transform.position - _colliderPosition;
+					direction.y = 0;
 					var rigidbody = obj.GetComponent<Rigidbody>();
 					var force = Mathf.Lerp(_waveForce, 0, Vector3.Distance(hitInfo.point, obj.transform.position) / _waveRadius);
 					rigidbody.AddForceAtPosition(direction.normalized * force, hitInfo.point, ForceMode.Impulse);
