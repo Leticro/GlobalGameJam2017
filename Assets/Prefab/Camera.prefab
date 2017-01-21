@@ -119,8 +119,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e578d25ffabd04a699a61a6fa23e3e33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _waveRadius: 10
-  _waveForce: 25
+  _waveRadius: 15
+  _waveForce: 250
 --- !u!124 &124774316279045934
 Behaviour:
   m_ObjectHideFlags: 1
