@@ -6,8 +6,7 @@ public class Follow : MonoBehaviour
 {
     [SerializeField]
     private Camera _camera;
-    [SerializeField]
-    public GameObject _player;
+    public GameObject player;
     [SerializeField]
     private float _zoomOutCap;
     [SerializeField]
@@ -20,7 +19,7 @@ public class Follow : MonoBehaviour
     {
         mouseScroll(); // enable mouse scrolling
 
-        _camera.transform.position = _player.transform.position + camDistance; // camera follow player
+        _camera.transform.position = player.transform.position + camDistance; // camera follow player
     }
 
     void mouseScroll()

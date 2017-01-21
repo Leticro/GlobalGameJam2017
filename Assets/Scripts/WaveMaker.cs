@@ -42,7 +42,6 @@ public class WaveMaker : MonoBehaviour
 					var direction = obj.transform.position - hitInfo.point;
 					var rigidbody = obj.GetComponent<Rigidbody>();
 					var force = Mathf.Lerp(_waveForce, 0, Vector3.Distance(hitInfo.point, obj.transform.position) / _waveRadius);
-					Debug.Log("force: "  + force);
 					rigidbody.AddForceAtPosition(direction.normalized * force, hitInfo.point, ForceMode.Impulse);
 				}
 			}
