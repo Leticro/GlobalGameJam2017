@@ -7,7 +7,7 @@ public class Follow : MonoBehaviour
     [SerializeField]
     private Camera _camera;
     [SerializeField]
-    private GameObject _player;
+    public GameObject _player;
     [SerializeField]
     private float _zoomOutCap;
     [SerializeField]
