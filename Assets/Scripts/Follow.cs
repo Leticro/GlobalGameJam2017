@@ -8,24 +8,31 @@ public class Follow : MonoBehaviour
     private Camera _camera;
     [SerializeField]
     private GameObject _player;
+    [SerializeField]
+    private float _zoomOutCap;
+    [SerializeField]
+    private float _zoomInCap;
 
     private Vector3 camDistance = new Vector3(-8, 20, -15);
-    private float sensativity = 1 / 10;
+    private Vector3 camSense = new Vector3(-8, 20, -15)/10;
 
     void Update()
     {
+        mouseScroll(); // enable mouse scrolling
+
+        _camera.transform.position = _player.transform.position + camDistance; // camera follow player
+    }
+
+    void mouseScroll()
+    {
         var scroll = Input.GetAxis("Mouse ScrollWheel");
-        if (scroll > 0f && _camera.transform.position.y > 6) //zoom in
+        if (scroll > 0f && _camera.transform.position.y > _zoomInCap)
         {
-            camDistance -= new Vector3((float)-0.8, 2, (float)-1.5);
+            camDistance -= camSense;
         }
-        else if (scroll < 0f)
+        else if (scroll < 0f && _camera.transform.position.y < _zoomOutCap)
         {
-            camDistance += new Vector3((float)-0.8, 2, (float)-1.5); //zoom out
+            camDistance += camSense;
         }
-
-        _camera.transform.position = _player.transform.position + camDistance;
-
-        //Debug.DrawRay(ray.origin, ray.direction * 10, Color.yellow);
     }
 }
