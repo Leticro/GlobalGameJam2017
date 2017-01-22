@@ -7,6 +7,9 @@ public class FallRespawn : MonoBehaviour
 	#region Private
 	private Transform _transform;
 	private PlayerSpawner _spawn;
+
+    [SerializeField]
+    private AudioSource _audio;
 	[SerializeField]
 	private float _killY;
 	#endregion
@@ -15,13 +18,18 @@ public class FallRespawn : MonoBehaviour
 	{
 		_transform = GetComponent<Transform>();
 		_spawn = FindObjectOfType<PlayerSpawner>();
-	}
+        _audio = GetComponent<AudioSource>();
+    }
 
-	private void FixedUpdate()
+    private void FixedUpdate()
 	{
-		if (_transform.position.y <= _killY)
+        if (_transform.position.y <= _killY)
 		{
-			_spawn.Spawn();
-		}
+            if (_audio)
+            {
+                _audio.Play();
+            }
+            _spawn.Spawn();
+        }
 	}
 }

@@ -8,8 +8,14 @@ public class Finish : MonoBehaviour
 	#region Private
 	[SerializeField]
 	private string _name;
+
+    AudioSource _audio;
 	#endregion
 
+    private void Awake()
+    {
+        _audio = GetComponent<AudioSource>();
+    }
 	private void OnTriggerEnter(Collider other)
 	{
 		if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
@@ -23,6 +29,10 @@ public class Finish : MonoBehaviour
 			waveMaker.EndGame();
 
 			Time.timeScale = 0;
-		}
+            if (_audio)
+            {
+                _audio.Play();
+            }
+        }
 	}
 }

@@ -14,6 +14,7 @@ public class PlayerSpawner : MonoBehaviour
 	private GameObject _camera;
 	private HUD _hud;
 	private WaveMaker _waveMaker;
+    private AudioSource _audio;
 	#endregion
 
 	private void Start()
@@ -21,7 +22,16 @@ public class PlayerSpawner : MonoBehaviour
 		Spawn();
 	}
 
-	public void Spawn()
+    private void Awake()
+    {
+        _audio = GetComponent<AudioSource>();
+        if (_audio)
+        {
+            _audio.Play();
+        }
+    }
+
+    public void Spawn()
 	{
 		Destroy(_player);
 		Destroy(_camera);

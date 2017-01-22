@@ -14,6 +14,7 @@ public class WaveMaker : MonoBehaviour
 	private GameObject _waveEffectPrefab;
 
 	private bool _hasStarted;
+    private AudioSource _audio;
 
 #if DEBUG
 	private bool _showCollider;
@@ -35,7 +36,8 @@ public class WaveMaker : MonoBehaviour
 	private void Awake()
 	{
 		_camera = GetComponent<Camera>();
-		_hasStarted = false;
+        _audio = GetComponent<AudioSource>();
+        _hasStarted = false;
 	}
 
 	private void Update()
@@ -67,8 +69,12 @@ public class WaveMaker : MonoBehaviour
 					var force = Mathf.Lerp(_waveForce, 0, Vector3.Distance(hitInfo.point, obj.transform.position) / _waveRadius);
 					rigidbody.AddForceAtPosition(direction.normalized * force, hitInfo.point, ForceMode.Impulse);
 				}
-			}
-		}
+                if (_audio)
+                {
+                    _audio.Play();
+                }
+            }
+        }
 	}
 
 #if DEBUG

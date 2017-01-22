@@ -35,8 +35,8 @@ public class Bumper : MonoBehaviour
 		}
 	}
 
-	private void OnCollisionExit(Collision info)
-	{
-		_isBumpping = false;
-	}
+    private void OnCollisionExit(Collision info)
+    {
+        _isBumpping = false;
+    }
 }
