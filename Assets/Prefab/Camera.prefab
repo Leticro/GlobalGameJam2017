@@ -104,8 +104,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63344f55b9fc351489b86f411353da06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _camera: {fileID: 20305090275147204}
   player: {fileID: 0}
+  _camera: {fileID: 20305090275147204}
   _zoomOutCap: 100
   _zoomInCap: 5
 --- !u!114 &114781735014546080
@@ -120,9 +120,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _waveRadius: 15
+<<<<<<< Updated upstream
   _waveForce: 250
   _waveEffectPrefab: {fileID: 1160634437304660, guid: a4baecf02660a48f4b792dafca340907,
     type: 2}
+=======
+  _waveForce: 800
+>>>>>>> Stashed changes
 --- !u!124 &124774316279045934
 Behaviour:
   m_ObjectHideFlags: 1
