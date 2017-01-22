@@ -26,7 +26,7 @@ public class PlayerJump : MonoBehaviour
     {
         foreach (var c in col.contacts)
         {
-            if (c.point.y > 0.5f - _acceptableSlope && c.point.y < 0.5f + _acceptableSlope)
+            if (c.point.y > 0.5f - _acceptableSlope/2 && c.point.y < 0.5f + _acceptableSlope/2)
             {
                 _col = true;
             }
