@@ -140,5 +140,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerPrefab: {fileID: 1871880504728738, guid: f05fca1d86f96459db4068b13ccb8aad,
     type: 2}
-  _cameraPrefab: {fileID: 1598746537772650, guid: 42d5ed365160349588d1cd2d5658bc65,
+  _cameraPrefab: {fileID: 1618827253239386, guid: 835c045988b8c44179e48b595952499b,
     type: 2}

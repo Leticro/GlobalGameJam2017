@@ -4,36 +4,19 @@ using UnityEngine;
 
 public class Follow : MonoBehaviour
 {
-    public GameObject player;
+    private  GameObject _player;
 
-    #region Private
-    [SerializeField]
-    private Camera _camera;
-    [SerializeField]
-    private float _zoomOutCap;
-    [SerializeField]
-    private float _zoomInCap;
+	public System.Action<GameObject> OnSetPlayer;
 
-    private Vector3 _camDistance = new Vector3(-8, 20, -15);
-    private Vector3 _camSense = new Vector3(-8, 20, -15)/10;
-    #endregion  
-
-    void Update()
+    private void Update()
     {
-        mouseScroll(); // enable mouse scrolling
-        _camera.transform.position = player.transform.position + _camDistance; // camera follow player
+        transform.transform.position = _player.transform.position; // camera follow player
     }
 
-    void mouseScroll()
-    {
-        var scroll = Input.GetAxis("Mouse ScrollWheel");
-        if (scroll > 0f && _camera.transform.position.y > _zoomInCap)
-        {
-            _camDistance -= _camSense;
-        }
-        else if (scroll < 0f && _camera.transform.position.y < _zoomOutCap)
-        {
-            _camDistance += _camSense;
-        }
-    }
+	public void SetPlayer(GameObject player)
+	{
+		_player = player;
+
+		OnSetPlayer(_player);
+	}
 }

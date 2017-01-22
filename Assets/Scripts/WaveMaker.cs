@@ -13,6 +13,8 @@ public class WaveMaker : MonoBehaviour
 	[SerializeField]
 	private GameObject _waveEffectPrefab;
 
+	private bool _hasStarted;
+
 #if DEBUG
 	private bool _showCollider;
 	private float _colliderTime;
@@ -20,13 +22,29 @@ public class WaveMaker : MonoBehaviour
 #endif
 	#endregion
 
+	public void StartGame()
+	{
+		_hasStarted = true;
+	}
+
+	public void EndGame()
+	{
+		_hasStarted = false;
+	}
+
 	private void Awake()
 	{
 		_camera = GetComponent<Camera>();
+		_hasStarted = false;
 	}
 
 	private void Update()
 	{
+		if (!_hasStarted)
+		{
+			return;
+		}
+
 		if (Input.GetMouseButtonDown(0))
 		{
 			var ray = _camera.ScreenPointToRay(Input.mousePosition);

@@ -12,6 +12,8 @@ public class PlayerSpawner : MonoBehaviour
 
 	private GameObject _player;
 	private GameObject _camera;
+	private HUD _hud;
+	private WaveMaker _waveMaker;
 	#endregion
 
 	private void Start()
@@ -29,7 +31,27 @@ public class PlayerSpawner : MonoBehaviour
 		var follow = _camera.GetComponent<Follow>();
 		if (follow)
 		{
-			follow.player = _player;
+			follow.SetPlayer(_player);
 		}
+
+		_hud = _camera.GetComponentInChildren<HUD>();
+		_waveMaker = _camera.GetComponentInChildren<WaveMaker>();
+
+		StartCoroutine(CountDown());
+	}
+
+	private IEnumerator CountDown()
+	{
+		_hud.SetCountDownText("3");
+		yield return new WaitForSeconds(1);
+		_hud.SetCountDownText("2");
+		yield return new WaitForSeconds(1);
+		_hud.SetCountDownText("1");
+		yield return new WaitForSeconds(1);
+		_hud.SetCountDownText("GO!");
+		_waveMaker.StartGame();
+		_hud.StartGame();
+		yield return new WaitForSeconds(1);
+		_hud.SetCountDownText("");
 	}
 }
