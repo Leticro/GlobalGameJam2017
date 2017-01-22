@@ -16,11 +16,9 @@ public class WaveMaker : MonoBehaviour
 	private bool _hasStarted;
     private AudioSource _audio;
 
-#if DEBUG
 	private bool _showCollider;
 	private float _colliderTime;
 	private Vector3 _colliderPosition;
-#endif
 	#endregion
 
 	public void StartGame()
