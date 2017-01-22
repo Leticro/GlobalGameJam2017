@@ -121,6 +121,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _waveRadius: 15
   _waveForce: 250
+  _waveEffectPrefab: {fileID: 1160634437304660, guid: a4baecf02660a48f4b792dafca340907,
+    type: 2}
 --- !u!124 &124774316279045934
 Behaviour:
   m_ObjectHideFlags: 1

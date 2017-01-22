@@ -14,6 +14,7 @@ public class Finish : MonoBehaviour
 	{
 		if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
 		{
+			// TODO: Level complete screen.
 			SceneManager.LoadScene(_name);
 		}
 	}

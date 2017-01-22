@@ -11,7 +11,7 @@ public class PlayerSpawner : MonoBehaviour
 	private GameObject _cameraPrefab;
 	#endregion
 
-	private void Start ()
+	private void Start()
 	{
 		var player = Instantiate(_playerPrefab, transform.position, transform.rotation);
 		var camera = Instantiate(_cameraPrefab, transform.position, _cameraPrefab.transform.rotation);

@@ -10,6 +10,8 @@ public class WaveMaker : MonoBehaviour
 	private float _waveRadius;
 	[SerializeField]
 	private float _waveForce;
+	[SerializeField]
+	private GameObject _waveEffectPrefab;
 
 #if DEBUG
 	private bool _showCollider;
@@ -35,6 +37,8 @@ public class WaveMaker : MonoBehaviour
 				_showCollider = true;
 				_colliderPosition = hitInfo.point;
 				_colliderTime = Time.time;
+
+				Instantiate(_waveEffectPrefab, hitInfo.point + Vector3.up * 0.05f, Quaternion.identity);
 
 				var objects = Physics.OverlapSphere(hitInfo.point, _waveRadius, 1 << LayerMask.NameToLayer("Player"));
 				foreach (var obj in objects)
