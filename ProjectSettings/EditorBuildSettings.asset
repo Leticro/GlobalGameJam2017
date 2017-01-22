@@ -9,8 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/winner.unity
   - enabled: 1
     path: Assets/Scenes/Stage1-2.unity
-  - enabled: 0
-    path: Assets/Scenes/RampTest.unity
   - enabled: 1
     path: Assets/Scenes/Stage1-5.unity
   - enabled: 1
