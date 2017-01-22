@@ -215,7 +215,7 @@ Prefab:
     - target: {fileID: 114921737271215342, guid: 630bc27e0088b440c96cb8a9a03c6655,
         type: 2}
       propertyPath: _name
-      value: Stage1-2
+      value: Stage3-1
       objectReference: {fileID: 0}
     - target: {fileID: 4956074613017674, guid: 630bc27e0088b440c96cb8a9a03c6655, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
