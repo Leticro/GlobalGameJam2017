@@ -23,11 +23,8 @@ GameObject:
   - component: {fileID: 135618626367663274}
   - component: {fileID: 23342775637599052}
   - component: {fileID: 54849699043327708}
-<<<<<<< 6a540ee3dd9c2a50aada13c10236b4604dbc58fc
-  - component: {fileID: 114494168860408734}
-=======
   - component: {fileID: 114188388270755446}
->>>>>>> respawns the player if they fall below an amount.
+  - component: {fileID: 114526891862758142}
   m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
@@ -101,11 +98,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
-<<<<<<< 6a540ee3dd9c2a50aada13c10236b4604dbc58fc
---- !u!114 &114494168860408734
-=======
 --- !u!114 &114188388270755446
->>>>>>> respawns the player if they fall below an amount.
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -113,17 +106,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1871880504728738}
   m_Enabled: 1
   m_EditorHideFlags: 0
-<<<<<<< 6a540ee3dd9c2a50aada13c10236b4604dbc58fc
   m_Script: {fileID: 11500000, guid: d6cb19b76097e40408a8cd132881e48f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _jumpPower: 200
-=======
+  _acceptableSlope: 0.05
+--- !u!114 &114526891862758142
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1871880504728738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 793f3a2ffcc884d5e8cc3835ef50e2b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _killY: -25
->>>>>>> respawns the player if they fall below an amount.
 --- !u!135 &135618626367663274
 SphereCollider:
   m_ObjectHideFlags: 1
