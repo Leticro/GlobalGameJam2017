@@ -15,7 +15,7 @@ public class PlayerJump : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && _col)
+        if (Input.GetKeyDown(KeyCode.Space) && _col || Input.GetKeyDown(KeyCode.Mouse1) && _col)
         {
             GetComponent<Rigidbody>().AddForce(new Vector3(0, _jumpPower, 0), ForceMode.Impulse);
             _col = false;
@@ -26,7 +26,7 @@ public class PlayerJump : MonoBehaviour
     {
         foreach (var c in col.contacts)
         {
-            if (c.point.y > 0.5f - _acceptableSlope/2 && c.point.y < 0.5f + _acceptableSlope/2)
+            if (c.normal.y >= 1 - _acceptableSlope)
             {
                 _col = true;
             }
