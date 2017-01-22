@@ -18,7 +18,7 @@ Material:
     - first:
         name: _BackTex
       second:
-        m_Texture: {fileID: 2800000, guid: 8cfab1f2be1e9134891e1f7d608edd6f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 31b76ec1bf9b614448692515f199d1e0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -48,7 +48,7 @@ Material:
     - first:
         name: _DownTex
       second:
-        m_Texture: {fileID: 2800000, guid: 8cfab1f2be1e9134891e1f7d608edd6f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9b0e8811e22c9364e80c4d96af59141a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -60,13 +60,13 @@ Material:
     - first:
         name: _FrontTex
       second:
-        m_Texture: {fileID: 2800000, guid: 8cfab1f2be1e9134891e1f7d608edd6f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 383dd4477df85304aa2bd2eacadadb7b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
         name: _LeftTex
       second:
-        m_Texture: {fileID: 2800000, guid: 8cfab1f2be1e9134891e1f7d608edd6f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 512e48777e80e074b969be00b1df51c7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -96,7 +96,7 @@ Material:
     - first:
         name: _RightTex
       second:
-        m_Texture: {fileID: 2800000, guid: 8cfab1f2be1e9134891e1f7d608edd6f, type: 3}
+        m_Texture: {fileID: 2800000, guid: a6ddd0f7e9422f7418092045ab3c6bef, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -108,7 +108,7 @@ Material:
     - first:
         name: _UpTex
       second:
-        m_Texture: {fileID: 2800000, guid: 8cfab1f2be1e9134891e1f7d608edd6f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 219841cc3ba0b8e40b2659919727b686, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -129,7 +129,7 @@ Material:
       second: 0
     - first:
         name: _Exposure
-      second: 0.9
+      second: 3.02
     - first:
         name: _GlossMapScale
       second: 1
@@ -153,7 +153,7 @@ Material:
       second: 0.02
     - first:
         name: _Rotation
-      second: 90
+      second: 0
     - first:
         name: _SmoothnessTextureChannel
       second: 0
@@ -190,4 +190,4 @@ Material:
       second: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - first:
         name: _Tint
-      second: {r: 0.8014706, g: 0.14923935, b: 0.10607699, a: 0.5}
+      second: {r: 0.1102941, g: 0.1102941, b: 0.1102941, a: 0.5}
