@@ -9,16 +9,27 @@ public class PlayerSpawner : MonoBehaviour
 	private GameObject _playerPrefab;
 	[SerializeField]
 	private GameObject _cameraPrefab;
+
+	private GameObject _player;
+	private GameObject _camera;
 	#endregion
 
 	private void Start()
 	{
-		var player = Instantiate(_playerPrefab, transform.position, transform.rotation);
-		var camera = Instantiate(_cameraPrefab, transform.position, _cameraPrefab.transform.rotation);
-		var follow = camera.GetComponent<Follow>();
+		Spawn();
+	}
+
+	public void Spawn()
+	{
+		Destroy(_player);
+		Destroy(_camera);
+
+		_player = Instantiate(_playerPrefab, transform.position, transform.rotation);
+		_camera = Instantiate(_cameraPrefab, transform.position, _cameraPrefab.transform.rotation);
+		var follow = _camera.GetComponent<Follow>();
 		if (follow)
 		{
-			follow.player = player;
+			follow.player = _player;
 		}
 	}
 }
