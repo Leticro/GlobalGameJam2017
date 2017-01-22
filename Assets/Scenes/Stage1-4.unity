@@ -138,7 +138,11 @@ Prefab:
     - target: {fileID: 114921737271215342, guid: 630bc27e0088b440c96cb8a9a03c6655,
         type: 2}
       propertyPath: _name
+<<<<<<< 872a936188fefcf4867665ac58b11c61ef4bc014:Assets/Scenes/Stage1-4.unity
       value: Stage1-5
+=======
+      value: Stage2-1
+>>>>>>> Added speed did some other things:Assets/Scenes/RampTest.unity
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 630bc27e0088b440c96cb8a9a03c6655, type: 2}

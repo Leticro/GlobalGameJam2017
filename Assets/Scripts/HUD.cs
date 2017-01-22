@@ -16,18 +16,22 @@ public class HUD : MonoBehaviour
 	[SerializeField]
 	private Text _countDownText;
 	[SerializeField]
+	private Text _speedText;
+	[SerializeField]
 	private Button _mainMenuButton;
 	[SerializeField]
 	private Button _nextLevelButton;
 
-	private readonly string TIME_FORMAT = "Time: {0}";
+	private readonly string TIME_FORMAT = "Time: {0:0.00}";
 	private readonly string DISTANCE_FORMAT = "Distance: {0:0.00} km";
+	private readonly string SPEED_FORMAT = "Speed: {0:0.00} km/s";
 
 	private GameObject _player;
 	private float _startTime;
 	private Finish _finish;
 	private bool _hasStarted;
 	private string _nextLevelString;
+	private Rigidbody _playerRigidbody;
 	#endregion
 
 	public void StartGame()
@@ -81,8 +85,8 @@ public class HUD : MonoBehaviour
 
 	private void OnSetPlayer(GameObject player)
 	{
-		Debug.Log("Set player");
 		_player = player;
+		_playerRigidbody = _player.GetComponent<Rigidbody>();
 	}
 
 	private void Update()
@@ -95,6 +99,11 @@ public class HUD : MonoBehaviour
 		if (_hasStarted)
 		{
 			_timeText.text = string.Format(TIME_FORMAT, System.Math.Round(Time.time - _startTime, 2));
+		}
+
+		if (_playerRigidbody)
+		{
+			_speedText.text = string.Format(SPEED_FORMAT, _playerRigidbody.velocity.magnitude);
 		}
 	}
 }
