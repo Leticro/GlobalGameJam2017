@@ -787,7 +787,6 @@ MonoBehaviour:
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
-<<<<<<< 847e67d4d9277ab817bb917ca54c6e950a894f6c
 --- !u!114 &114233556238578164
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -799,10 +798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd24be292249d4e579b3f534c83374af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114311396580310216
-=======
 --- !u!114 &114123788287135278
->>>>>>> leaderboards, with hud!
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
