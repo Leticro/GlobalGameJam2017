@@ -29,7 +29,6 @@ public class PlayerJump : MonoBehaviour
                 _jumpAudio.Play();
             }
             GetComponent<Rigidbody>().AddForce(new Vector3(0, _jumpPower, 0), ForceMode.Impulse);
-            _col = false;
         }
     }
 
@@ -42,6 +41,10 @@ public class PlayerJump : MonoBehaviour
                 _col = true;
             }
         }
+    }
+    void OnCollisionExit(Collision col)
+    {
+        _col = false;
     }
 }
 
