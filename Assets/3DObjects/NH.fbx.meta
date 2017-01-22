@@ -1,16 +1,53 @@
 fileFormatVersion: 2
-guid: 731a72b895375e745b9cfda8bce40fa3
-timeCreated: 1485030343
+guid: 2560d20055b8d9c4b822015c45b5b083
+timeCreated: 1485112527
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: StartPoint
+    100000: bn_center
+    100002: bn_chest
+    100004: bn_head
+    100006: bn_hips
+    100008: bn_l_ankle
+    100010: bn_l_elbow
+    100012: bn_l_hip
+    100014: bn_l_knee
+    100016: bn_l_shoulder
+    100018: bn_l_wrist
+    100020: bn_r_ankle
+    100022: bn_r_elbow
+    100024: bn_r_hip
+    100026: bn_r_knee
+    100028: bn_r_shoulder
+    100030: bn_r_wrist
+    100032: bn_tongue
+    100034: //RootNode
+    100036: NH_mesh
+    100038: Root
+    400000: bn_center
+    400002: bn_chest
+    400004: bn_head
+    400006: bn_hips
+    400008: bn_l_ankle
+    400010: bn_l_elbow
+    400012: bn_l_hip
+    400014: bn_l_knee
+    400016: bn_l_shoulder
+    400018: bn_l_wrist
+    400020: bn_r_ankle
+    400022: bn_r_elbow
+    400024: bn_r_hip
+    400026: bn_r_knee
+    400028: bn_r_shoulder
+    400030: bn_r_wrist
+    400032: bn_tongue
+    400034: //RootNode
+    400036: NH_mesh
+    400038: Root
+    4300000: NH_mesh
     9500000: //RootNode
+    13700000: NH_mesh
   materials:
     importMaterials: 1
     materialName: 0
@@ -38,7 +75,7 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
-    importBlendShapes: 0
+    importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -51,8 +88,8 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
-    normalSmoothAngle: 180
-    normalImportMode: 1
+    normalSmoothAngle: 60
+    normalImportMode: 0
     tangentImportMode: 3
   importAnimation: 1
   copyAvatar: 0
