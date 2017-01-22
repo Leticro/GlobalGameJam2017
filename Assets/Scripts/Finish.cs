@@ -22,7 +22,7 @@ public class Finish : MonoBehaviour
 		{
 			// TODO: Level complete screen.
 			var hud = FindObjectOfType<HUD>();
-			hud.SetCountDownText("Finished!");
+			hud.SetCountDownText("");
 			hud.ShowButtons(_name);
 			
 			var waveMaker = FindObjectOfType<WaveMaker>();
