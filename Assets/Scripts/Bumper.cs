@@ -10,6 +10,13 @@ public class Bumper : MonoBehaviour
 	[SerializeField]
 	private float _bumpAmount;
 
+	private AudioSource _audio;
+
+	private void Awake()
+	{
+		_audio = GetComponent<AudioSource>();
+	}
+
 	private void OnCollisionEnter(Collision info)
 	{
 		if (!_isBumpping)
@@ -20,6 +27,11 @@ public class Bumper : MonoBehaviour
 			var reflect = info.relativeVelocity - 2 * info.contacts[0].normal * (Vector3.Dot(info.contacts[0].normal, info.relativeVelocity));
 
 			info.rigidbody.AddForce(reflect.normalized * _bumpAmount, ForceMode.Impulse);
+
+			if (_audio)
+			{
+				_audio.Play();
+			}
 		}
 	}
 
