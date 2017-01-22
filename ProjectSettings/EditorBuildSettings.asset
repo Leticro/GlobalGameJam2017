@@ -45,3 +45,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Stage2-8.unity
   - enabled: 1
     path: Assets/Scenes/Stage3-2.unity
+  - enabled: 1
+    path: Assets/Scenes/Stage3-4.unity
+  - enabled: 1
+    path: Assets/Scenes/Stage3-3.unity
