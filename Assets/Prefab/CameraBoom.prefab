@@ -375,7 +375,7 @@ MeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3c506f3c9a0b4af40b02396b5d2cc585, type: 2}
+  - {fileID: 2100000, guid: e432520d48ec3e04a9a7d79f360973fb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -592,9 +592,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd24be292249d4e579b3f534c83374af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _zoomInCap: 4
-  _zoomOutCap: 200
-  _cameraSensitivity: 2
 --- !u!114 &114311396580310216
 MonoBehaviour:
   m_ObjectHideFlags: 1
